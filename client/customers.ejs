@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABC Bank | Serving People</title>
+    <link rel="stylesheet" href="header.css" />
+    <style>
+      .header a.active {
+        background-color: darkred;
+        color: white;
+      }
+
+      .history {
+        background-color: #8b0000;
+
+        float: right;
+
+        text-align: center;
+        padding: 10px;
+        text-decoration: none;
+        font-size: 20px;
+
+        border-radius: 4px;
+        margin: 10px;
+      }
+      .hello {
+        color: white;
+      }
+      .hello:hover {
+        background-color: rgb(223, 185, 158);
+        color: white;
+      }
+
+      table {
+        padding: 20px;
+        width: 100%;
+        margin-top: 80px;
+      }
+      thead {
+        background-color: #8b0000;
+      }
+      th {
+        color: white;
+        font-size: 25px;
+      }
+      tbody {
+        background-color: #dbcfcf;
+      }
+      td {
+        color: #8b0000;
+        font-size: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <a href="index.html" class="logo">ABC BANK</a>
+      <div class="header-right">
+        <a href="index.html" class="">Home</a>
+        <a href="/customers" class="active">View All Customers</a>
+        <a href="transfer.html">Transfer Money</a>
+      </div>
+    </div>
+    <div class="history">
+      <a href="/history" class="hello">Transaction History</a>
+    </div>
+    <div class="history">
+      <a href="create.html" class="hello">Create Customer</a>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th class="one">Customer ID</th>
+          <th class="three">Email</th>
+          <th class="two">Customer Name</th>
+          <th class="four">Balance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(var i=0; i < customers.length; i++) { %>
+          <tr>
+            <td><%= customers[i].id %></td>
+            <td><%= customers[i].email %></td>
+            <td><%= customers[i].fullname %></td>
+            <td><%= customers[i].balance %></td>
+          </tr>
+       <% } %>
+      </tbody>
+    </table>
+  </body>
+</html>

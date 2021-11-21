@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABC Bank | Serving People</title>
+    <link rel="stylesheet" href="header.css" />
+    <style>
+      h1 {
+        color: #8b0000;
+        text-align: center;
+        font-size: 40px;
+        text-decoration: underline;
+      }
+      table {
+        padding: 20px;
+        width: 100%;
+        margin-top: 10px;
+      }
+      thead {
+        background-color: #8b0000;
+      }
+      th {
+        color: white;
+        font-size: 25px;
+      }
+      tbody {
+        background-color: #dbcfcf;
+      }
+      td {
+        color: #8b0000;
+        font-size: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <a href="index.html" class="logo">ABC BANK</a>
+      <div class="header-right">
+        <a href="index.html">Home</a>
+        <a href="/customers">View All Customers</a>
+        <a href="transfer.html">Transfer Money</a>
+      </div>
+    </div>
+    <h1>Transaction History</h1>
+    <table>
+      <thead>
+        <th class="one">Transaction ID</th>
+        <th class="two">Transfer from</th>
+        <th class="three">Transfer to</th>
+        <th class="four">Amount</th>
+        <th class="five">Done at</th>
+      </thead>
+      <tbody>
+        <% for(var i=0; i < txs.length; i++) { %>
+          <tr>
+            <td><%= txs[i].id %></td>
+            <td><%= txs[i].sender %></td>
+            <td><%= txs[i].receiver %></td>
+            <td><%= txs[i].amount %></td>
+            <td><%= txs[i].date %></td>
+          </tr>
+       <% } %>
+      </tbody>
+    </table>
+  </body>
+</html>
+
+<script></script>

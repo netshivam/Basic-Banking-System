@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABC Bank | Serving People</title>
+    <link rel="stylesheet" href="header.css" />
+    <style>
+      .header a.active {
+        background-color: darkred;
+        color: white;
+      }
+
+      input[type='text'],
+      input[type='number'] {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid #8b0000;
+        border-radius: 4px;
+        box-sizing: border-box;
+        resize: vertical;
+        margin: 10px;
+      }
+      button {
+        background-color: #8b0000;
+        font-size: 20px;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        float: right;
+        margin: 25px;
+      }
+      .container {
+        border-radius: 5px;
+        background-color: #f1ebeb;
+        padding: 50px 20px 100px 20px;
+        margin-top: 50px;
+      }
+
+      label {
+        float: left;
+        width: 25%;
+        color: #8b0000;
+        font-size: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <a href="index.html" class="logo">ABC BANK</a>
+      <div class="header-right">
+        <a href="index.html" class="">Home</a>
+        <a href="/customers">View All Customers</a>
+        <a href="transfer.html" class="active">Transfer Money</a>
+      </div>
+    </div>
+    <form action="/transfer" method="POST" class="container">
+      <label for="sender">Transfer from:</label>
+      <input type="text" name="sender" placeholder="Add sender's email address" />
+
+      <label for="receiver">Transfer to:</label>
+      <input type="text" name="receiver" placeholder="Transfer to (add email)" />
+
+      <label for="amount">Amount:</label>
+      <input type="number" name="amount" placeholder="Amount to send (INR)" />
+      <button>Transfer</button>
+    </form>
+  </body>
+</html>

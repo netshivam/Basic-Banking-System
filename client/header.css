@@ -1,0 +1,29 @@
+.header{
+    overflow: hidden;
+    background-color: #dbcfcf;
+    padding: 30px 10px;
+}
+.header a {
+float: left;
+color: rgb(83, 80, 80);
+text-align: center;
+padding: 20px;
+text-decoration: none;
+font-size: 35px;
+line-height: 60px;
+border-radius: 4px;
+}
+
+.header a.logo {
+font-size: 80px;
+font-weight: bold;
+color: #8b0000;
+}
+.header-right {
+float: right;
+}
+
+.header a:hover{
+    background-color: saddlebrown;
+    color: white
+}
